@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img{
+  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-gradient-to-br from-stone-900 to-slate-900;
+}
+
+nav ul {
+  @apply lg:flex lg:items-center lg:justify-center lg:gap-3;
+}
+
+nav ul li a {
+  @apply text-sm;
+}
+
+
+.btn{
+  @apply py-2 px-4 border-white border-2 bg-transparent text-white hover:opacity-75 transition-all duration-200;
+}
+.heading{
+  @apply text-white font-bold text-4xl md:text-5xl xl:text-6xl
+}
+p{
+  @apply text-sm;
+  line-height: 1.8;
+}
+
+.showcase{
+  background: url("./spacex-YSvUYqf9Mjk-unsplash.jpg") no-repeat center/cover;
+  height: calc(100vh - 0.1px);
+}
+.showcase .overlay{
+  background-color: rgba(0, 0, 0, 0.8);
+  height: calc(100vh - 0.1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.max-width{
+  @apply max-w-6xl mx-auto;
+}
+
+.articles{
+  @apply bg-stone-900 p-5 rounded-lg shadow shadow-zinc-800 text-white text-sm;
+}
+
+.spinner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.spinner article{
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+  border: 2px solid #98e2cb21;
+  border-top-color: #10b581;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
