@@ -38,13 +38,6 @@ export default function Crew() {
  
         ))}
 
-
-
-
-
-
-
-
      </div>
     </section>
     
